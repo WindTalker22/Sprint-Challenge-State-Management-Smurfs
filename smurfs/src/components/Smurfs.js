@@ -2,10 +2,19 @@ import React, { useState } from "react"
 import { connect } from "react-redux"
 import { fetchSmurfs, postSmurfs } from "../actions/index"
 
-const Smurfs = () => {
+const Smurfs = props => {
+  console.log("Hi from Smurfs Comp", props)
   const [newSmurf, setNewSmurf] = useState({ name: "", age: "", height: "" })
 
-  return <div></div>
+  return (
+    <section>
+      <form>
+        <input />
+        <input />
+        <input />
+      </form>
+    </section>
+  )
 }
 
 const mapStateToProps = state => {
