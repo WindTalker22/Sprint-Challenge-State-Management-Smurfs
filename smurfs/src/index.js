@@ -9,6 +9,7 @@ import "./index.css"
 import App from "./components/App"
 
 const store = createStore(reducer, applyMiddleware(thunk, logger))
+console.log("Hi from the store", store)
 
 ReactDOM.render(
   <Provider store={store}>

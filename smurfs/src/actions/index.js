@@ -18,7 +18,7 @@ export const fetchSmurfs = () => dispatch => {
     })
     .catch(err => {
       console.log("Hi from the fetch catch", err)
-      dispatch({ typr: "FETCHING_SMURF_FAILURE" })
+      dispatch({ typr: "FETCHING_SMURF_FAILURE", payload: err })
     })
     .finally(() => {
       console.log("Axios fetch call complete ")
@@ -35,7 +35,7 @@ export const postSmurfs = newSmurf => dispatch => {
     })
     .catch(err => {
       console.log("Hi from the post catch", err)
-      dispatch({ type: "POST_SMURF_FAILURE" })
+      dispatch({ type: "POST_SMURF_FAILURE", payload: err })
     })
     .finally(() => {
       console.log("Axios post call complete")
