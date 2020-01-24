@@ -20,6 +20,7 @@ export const reducer = (state = initialState, action) => {
         isLoading: true
       }
     case FETCHING_SMURF_SUCCESS:
+      console.log("success reducer", action)
       return {
         ...state,
         smurfs: action.payload,
@@ -36,10 +37,11 @@ export const reducer = (state = initialState, action) => {
         isLoading: true
       }
     case POST_SMURF_SUCCESS:
+      console.log("fail reducer", action)
       return {
         ...state,
-        smurfs: [...state.smurfs, action.payload],
-        isLoading: false
+        isLoading: false,
+        smurfs: [...state.smurfs, action.payload]
       }
     case POST_SMURF_FAILURE:
       return {
